@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rodni list</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #fff9e6;
+      margin: 0;
+      padding: 15px;
+      font-size: 13px;
+    }
+
+    .okvir-rodnog-lista {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      border: 6px double #f1c40f;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2, h3 {
+      text-align: center;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .naslov {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin: 15px 0;
+      text-transform: uppercase;
+    }
+
+    .tabela {
+      width: 100%;
+      border-spacing: 8px;
+    }
+
+    .tabela td {
+      vertical-align: top;
+    }
+
+    .oznaka {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 3px;
+      color: #333;
+    }
+
+    .unos {
+      width: 100%;
+      padding: 6px 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #fdfdfd;
+      font-size: 12px;
+    }
+
+    .naslov-dijela {
+      text-align: center;
+      background-color: #fdf3c1;
+      font-weight: bold;
+      padding: 6px;
+      border-radius: 6px;
+      margin: 15px 0 8px;
+      color: #8a6d1d;
+      border: 1px solid #f1c40f;
+      font-size: 13px;
+    }
+
+    .futer {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+    }
+
+    .gumb-okvir {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .gumb {
+      background-color: #f1c40f;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      font-size: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .gumb:hover {
+      background-color: #d4ac0d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="okvir-rodnog-lista">
+    <h3>Bosna i Hercegovina<br>Federacija BiH</h3>
+    <div class="naslov">Rodni list</div>
+
+    <table class="tabela">
+      <tr>
+        <td style="width: 50%;">
+          <label class="oznaka">Prezime</label>
+          <input class="unos" type="text" name="prezime">
+        </td>
+        <td>
+          <label class="oznaka">Spol</label>
+          <input class="unos" type="text" name="spol">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label class="oznaka">Ime</label>
+          <input class="unos" type="text" name="ime">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label class="oznaka">Datum i sat rođenja</label>
+          <input class="unos" type="text" name="datum_vrijeme" placeholder="npr. 13.05.2025. u 14:30">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label class="oznaka">Mjesto i općina gdje je rođen/a</label>
+          <input class="unos" type="text" name="mjesto">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label class="oznaka">Država rođenja</label>
+          <input class="unos" type="text" name="drzava">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label class="oznaka">Matični broj (JMBG)</label>
+          <input class="unos" type="text" name="jmbg">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="oznaka">Državljanstvo</label>
+          <input class="unos" type="text" name="drzavljanstvo">
+        </td>
+        <td>
+          <label class="oznaka">Narodnost</label>
+          <input class="unos" type="text" name="nacionalnost">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label class="oznaka">Adresa (mjesto prebivališta)</label>
+          <input class="unos" type="text" name="prebivaliste">
+        </td>
+      </tr>
+    </table>
+
+    <div class="naslov-dijela">Roditelji</div>
+
+    <table class="tabela">
+      <tr>
+        <td>
+          <label class="oznaka">Otac (ime i prezime)</label>
+          <input class="unos" type="text" name="otac">
+        </td>
+        <td>
+          <label class="oznaka">Majka (ime i prezime)</label>
+          <input class="unos" type="text" name="majka">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label class="oznaka">Djevojačko prezime majke</label>
+          <input class="unos" type="text" name="djevojacko">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label class="oznaka">JMBG jednog roditelja</label>
+          <input class="unos" type="text" name="jmbg_roditelji">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label class="oznaka">Bilješke / naknadni upisi</label>
+          <input class="unos" type="text" name="zabiljeske">
+        </td>
+      </tr>
+    </table>
+
+    <div class="futer">
+      Ovaj dokument nema rok važenja.<br>
+      Datum izdavanja: ____________ &nbsp;&nbsp;&nbsp; Matičar: ________________
+    </div>
+
+    <div class="gumb-okvir">
+      <button class="gumb" onclick="window.print()">Kopiraj</button>
+    </div>
+  </div>
+
+</body>
+</html>
